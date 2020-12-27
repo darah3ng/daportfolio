@@ -1,12 +1,33 @@
-import Homepage from './view/screens/homepage';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom';
+import Homepage from './view/screens/home';
+import AboutPage from './view/screens/about';
+import MiniProjectsPage from './view/screens/miniprojects';
 
 function App () {
   return (
-    <Homepage>
-      <h1>Da Portfolio</h1>
-      <p>Hey there, I'm glad you made it here.</p>
-      <p>Not much have been added here yet, but they are coming.. 🚀</p>
-    </Homepage>
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/miniprojects">Mini Projects</Link></li>
+          </ul>
+        </nav>
+
+        <Switch>
+          <Route exact path="/" component={Homepage} />
+          <Route path="/about" component={AboutPage} />
+          <Route path="/miniprojects" component={MiniProjectsPage} />
+        </Switch>
+      </div>
+  </Router>
   );
 }
 
