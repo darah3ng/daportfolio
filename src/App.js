@@ -1,24 +1,7 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import MainLayout from './components/layouts/MainLayout';
 
 function App() {
-  return (
-    <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/miniprojects">Mini Projects</Link>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  )
+  return <MainLayout />;
 }
 
 export default App;

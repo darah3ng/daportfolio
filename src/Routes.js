@@ -1,17 +1,19 @@
-import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from 'react-router-dom';
+
+import Header from './components/sections/Header';
+
 import Homepage from './components/screens/home';
 import AboutPage from './components/screens/about';
 import MiniProjectsPage from './components/screens/miniprojects';
 
-function Routes () {
+function Routes() {
   return (
     <Router>
+      <Header />
       <Switch>
         <Route exact path="/" component={Homepage} />
         <Route path="/about" component={AboutPage} />
