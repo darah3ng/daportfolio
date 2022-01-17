@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import {
   Box,
   Text,
@@ -6,14 +5,15 @@ import {
   Button,
   Flex,
   Stack,
-  useColorMode
+  useColorMode,
+  useDisclosure
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon, CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 
 const Logo = (props) => {
   return (
     <Box {...props}>
-      <Text fontSize="lg" fontWeight="bold">
+      <Text fontSize='lg' fontWeight='bold' textAlign='center'>
         Logo
       </Text>
     </Box>
@@ -48,7 +48,7 @@ const MenuLinks = ({ isOpen }) => {
         spacing={8}
         align="center"
         justify={['center', 'space-between', 'flex-end', 'flex-end']}
-        direction={['column', 'row', 'row', 'row']}
+        direction={['column', 'column', 'row', 'row']}
         pt={[4, 4, 0, 0]}
       >
         <Logo
@@ -83,15 +83,13 @@ const NavBarContainer = ({ children, ...props }) => {
 
 const NavBar = (props) => {
   const { colorMode, toggleColorMode } = useColorMode();
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
+  const { isOpen, onToggle } = useDisclosure();
 
   return (
     <NavBarContainer {...props}>
-      <MenuToggle toggle={toggle} isOpen={isOpen} />
+      <MenuToggle toggle={onToggle} isOpen={isOpen} />
       <MenuLinks isOpen={isOpen} />
-      <Button onClick={toggleColorMode}>
+      <Button mt={[5, 5, 0]} onClick={toggleColorMode}>
         {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
       </Button>
     </NavBarContainer>
