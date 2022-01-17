@@ -6,9 +6,9 @@ import {
 
 import Header from './components/sections/Header';
 
-import Homepage from './components/screens/home';
-import AboutPage from './components/screens/about';
-import MiniProjectsPage from './components/screens/miniprojects';
+import Homepage from './components/screens/Home';
+import AboutPage from './components/screens/About';
+import MiniProjectsPage from './components/screens/Miniprojects';
 
 function Routes() {
   return (

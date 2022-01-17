@@ -1,8 +1,8 @@
-import { useColorMode } from '@chakra-ui/react';
+import { Flex, useColorMode } from '@chakra-ui/react';
 import customTheme from '../../theme/customTheme';
 import Routes from '../../Routes';
 
-const Layout = () => {
+const Layout = (props) => {
   const { colorMode, setColorMode } = useColorMode();
 
   if (colorMode === undefined) {
@@ -13,7 +13,15 @@ const Layout = () => {
 
   return (
     <div style={{ minHeight: '90vh', background: brandColorTheme.background }}>
-      <Routes />
+      <Flex
+        direction='column'
+        align='center'
+        maxW={{ xl: '1200px' }}
+        m='0 auto'
+        {...props}
+      >
+        <Routes />
+      </Flex>
     </div>
   );
 };

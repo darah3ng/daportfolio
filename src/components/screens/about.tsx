@@ -1,8 +1,7 @@
-function AboutPage () {
+function AboutPage() {
   return (
     <div>
-      <h1>About</h1>
-      <p>About me</p>
+      <h1>About me</h1>
     </div>
   );
 };

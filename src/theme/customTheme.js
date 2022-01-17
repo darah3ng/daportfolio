@@ -1,4 +1,5 @@
 import { theme } from '@chakra-ui/react';
+import { createBreakpoints } from '@chakra-ui/theme-tools';
 import customColors from './customColors';
 
 const customTheme = {
@@ -11,8 +12,8 @@ const customTheme = {
     ...customColors
   },
   fonts: {
-    body: 'Inter var, sans-serif',
-    heading: 'Inter var, sans-serif',
+    body: 'Inter, sans-serif',
+    heading: 'Inter, sans-serif',
     mono: 'Fira Code, monospace'
   },
   fontSizes: {
@@ -55,8 +56,12 @@ const customTheme = {
     wider: '0.05em',
     widest: '0.1em'
   },
-  breakpoints: ['360px', '768px', '1024px', '1440px'],
-  // breakpoints: ['30em', '48em', '62em', '80em'],
+  breakpoints: createBreakpoints({
+    sm: '360px',
+    md: '768px',
+    lg: '1024px',
+    xl: '1440px'
+  }),
   space: {
     0: '0',
     1: '0.125rem',
