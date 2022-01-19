@@ -5,17 +5,20 @@ import {
   Button,
   Flex,
   Stack,
+  Avatar,
+  AvatarBadge,
   useColorMode,
   useDisclosure
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon, CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
+import Me from '../../assets/me.svg';
 
 const Logo = (props) => {
   return (
     <Box {...props}>
-      <Text fontSize='lg' fontWeight='bold' textAlign='center'>
-        Logo
-      </Text>
+      <Avatar bg='yellow.400' size='md' src={Me} name='Me'>
+        <AvatarBadge boxSize='0.85em' bg='green.400' />
+      </Avatar>
     </Box>
   );
 };
@@ -52,6 +55,7 @@ const MenuLinks = ({ isOpen }) => {
         pt={[4, 4, 0, 0]}
       >
         <Logo
+          align='center'
           w="100px"
           color={['white', 'white', 'primary.500', 'primary.500']}
         />
