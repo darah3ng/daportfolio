@@ -12,7 +12,6 @@ function FullHome() {
       marginLeft="auto"
       marginRight="auto"
       maxWidth="48rem"
-      paddingTop="1rem"
     >
       <Stack spacing={5} marginBottom={8}>
         <Heading color={`mode.${colorMode}.text`} display="flex">

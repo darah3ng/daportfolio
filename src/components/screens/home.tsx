@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button, Text, Box } from '@chakra-ui/react';
+import { Button, Text, Box, Stack } from '@chakra-ui/react';
 import { TiStar, TiStarOutline } from 'react-icons/ti';
 
 import FullHome from '../ui/FullHome';
@@ -12,19 +12,21 @@ function HomePage() {
   const buttonMarginLeft = showCard ? 0 : '1.5em';
 
   return (
-    <Box>
-      <Button
-        marginLeft={buttonMarginLeft}
-        size='sm'
-        colorScheme='teal'
-        rightIcon={buttonRightIcon}
-        onClick={() => setShowCard(!showCard)}
-      >
-        <Text>{buttonText}</Text>
-      </Button>
+    <Stack>
+      <Box>
+        <Button
+          marginLeft={buttonMarginLeft}
+          size='sm'
+          colorScheme='teal'
+          rightIcon={buttonRightIcon}
+          onClick={() => setShowCard(!showCard)}
+        >
+          <Text>{buttonText}</Text>
+        </Button>
+      </Box>
 
       {showCard ? <CardMe /> : <FullHome />}
-    </Box>
+    </Stack>
   );
 };
 
