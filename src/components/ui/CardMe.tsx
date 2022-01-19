@@ -47,6 +47,7 @@ export default function SocialProfileWithImage() {
             <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'}>
               Dara Heng
             </Heading>
+            <Text>🇰🇭 🇦🇺</Text>
             <Text color={'gray.500'}>Web Developer</Text>
           </Stack>
 
