@@ -6,7 +6,8 @@ import {
 
 import Header from './components/sections/Header';
 import Homepage from './components/screens/Home';
-import MiniProjectsPage from './components/screens/Miniprojects';
+import AboutPage from './components/screens/About';
+import ProjectsPage from './components/screens/Projects';
 
 function Routes() {
   return (
@@ -14,7 +15,8 @@ function Routes() {
       <Header />
       <Switch>
         <Route exact path="/" component={Homepage} />
-        <Route path="/miniprojects" component={MiniProjectsPage} />
+        <Route exact path="/about" component={AboutPage} />
+        <Route path="/projects" component={ProjectsPage} />
       </Switch>
   </Router>
   );
