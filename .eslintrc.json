@@ -22,7 +22,8 @@
   "globals": {
     "document": "readonly",
     "navigator": "readonly",
-    "window": "readonly"
+    "window": "readonly",
+    "JSX": "readonly"
   },
 
   "rules": {
