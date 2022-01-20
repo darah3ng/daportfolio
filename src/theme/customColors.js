@@ -89,7 +89,8 @@ const customColors = {
       career: {
         tagBG: '#f7fafc',
         text: '#1a202c',
-        subtext: '#2d3748'
+        subtext: '#2d3748',
+        logoBG: '#f0f8ff'
       },
       skills: {
         color: '#4299E1',
@@ -112,7 +113,8 @@ const customColors = {
       career: {
         tagBG: 'rgba(237, 242, 247, 0.16)',
         text: '#fff',
-        subtext: '#fff'
+        subtext: '#fff',
+        logoBG: '#f0f8ff'
       },
       skills: {
         color: '#fff',
