@@ -5,7 +5,6 @@ import {
 } from 'react-router-dom';
 
 import Header from './components/sections/Header';
-
 import Homepage from './components/screens/Home';
 import MiniProjectsPage from './components/screens/Miniprojects';
 
