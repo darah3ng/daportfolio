@@ -10,7 +10,7 @@ import {
   Button,
   useColorModeValue
 } from '@chakra-ui/react';
-import Me from '../../assets/me.svg';
+import Me from '../../assets/images/me.svg';
 
 export default function SocialProfileWithImage() {
   return (

@@ -11,7 +11,7 @@ import {
   useDisclosure
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon, CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
-import Me from '../../assets/me.svg';
+import Me from '../../assets/images/me.svg';
 
 const Logo = (props) => {
   return (
@@ -60,7 +60,8 @@ const MenuLinks = ({ isOpen }) => {
           color={['white', 'white', 'primary.500', 'primary.500']}
         />
         <MenuItem to="/">Home</MenuItem>
-        <MenuItem to="/miniprojects">Projects</MenuItem>
+        <MenuItem to="/about">About</MenuItem>
+        <MenuItem to="/projects">Projects</MenuItem>
       </Stack>
     </Box>
   );
