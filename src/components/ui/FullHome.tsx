@@ -11,20 +11,19 @@ function FullHome() {
       backgroundColor={`mode.${colorMode}.background`}
       marginLeft="auto"
       marginRight="auto"
+      width={{ lg: '40rem' }}
       maxWidth="48rem"
     >
       <Stack spacing={5} marginBottom={8}>
         <Heading color={`mode.${colorMode}.text`} display="flex">
           Howdy, I'm Dara 👋
         </Heading>
-
         <Text color={`mode.${colorMode}.subtext`}>
           I am a web dev, and a blockchain lover.
         </Text>
         <Text color={`mode.${colorMode}.subtext`}>
           This is my digital studio, where I present the things I've worked on and share what I've learned.
         </Text>
-
       </Stack>
 
       <Stack marginBottom={8}>
