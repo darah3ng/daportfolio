@@ -60,7 +60,6 @@ const MenuLinks = ({ isOpen }) => {
           color={['white', 'white', 'primary.500', 'primary.500']}
         />
         <MenuItem to="/">Home</MenuItem>
-        <MenuItem to="/about">About</MenuItem>
         <MenuItem to="/miniprojects">Projects</MenuItem>
       </Stack>
     </Box>
