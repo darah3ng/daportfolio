@@ -40,7 +40,7 @@ function CardMe() {
             top: 5,
             left: 0,
             backgroundImage: `url(${IMAGE})`,
-            filter: 'blur(15px)',
+            filter: 'blur(10px)',
             zIndex: -1
           }}
           _groupHover={{
@@ -66,10 +66,10 @@ function CardMe() {
           </Text>
 
           <Stack direction={'column'} alignSelf={'start'} pt={5}>
-            <Text fontSize={'sm'}>🧠 &nbsp; A curiosity rover mind</Text>
+            <Text fontSize={'sm'}>🧠 &nbsp; A curiosity rover</Text>
             <Text fontSize={'sm'}>🛠 &nbsp; Like building utility tools</Text>
             <Text fontSize={'sm'}>📷 &nbsp; Enjoy capturing moments</Text>
-            <Text fontSize={'sm'}>🍃 &nbsp; Like being in the woods</Text>
+            <Text fontSize={'sm'}>🍃 &nbsp; Love being in the woods</Text>
           </Stack>
         </Stack>
       </Box>

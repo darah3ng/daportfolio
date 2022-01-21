@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button, Text, Box, Stack } from '@chakra-ui/react';
+import { Button, Box, Stack } from '@chakra-ui/react';
 import { TiStar, TiStarOutline } from 'react-icons/ti';
 
 import PageLayout from '../layouts/PageLayout';
@@ -9,7 +9,6 @@ import CardMe from '../ui/CardMe';
 function HomePage() {
   const [showCard, setShowCard] = useState(false);
   const buttonRightIcon = showCard ? <TiStar /> : <TiStarOutline />;
-  const buttonText = showCard ? 'Full' : 'Mini';
   const buttonMarginLeft = showCard ? 0 : '1.5em';
 
   return (
@@ -20,10 +19,9 @@ function HomePage() {
           marginLeft={buttonMarginLeft}
           size='sm'
           colorScheme='teal'
-          rightIcon={buttonRightIcon}
           onClick={() => setShowCard(!showCard)}
         >
-          <Text>{buttonText}</Text>
+          {buttonRightIcon}
         </Button>
       </Box>
 

@@ -1,5 +1,4 @@
-import QUTLogo from '../assets/images/qut.svg';
-import TafeLogo from '../assets/images/tafe.png';
+import GraduationHat from '../assets/images/graduationhat.png';
 
 const educations = [
   {
@@ -8,7 +7,7 @@ const educations = [
     role: "Bachelor's Degree in Computer Science",
     skills: 'Software Development, Web Development',
     period: '2016 - 2017',
-    logo: QUTLogo
+    logo: GraduationHat
   },
   {
     title: 'TAFE Queensland',
@@ -16,7 +15,7 @@ const educations = [
     role: "Diploma's Degree in Software Development",
     skills: 'Web Development, Database Administrator, Project Manager',
     period: '2015 - 2015',
-    logo: TafeLogo
+    logo: GraduationHat
   }
 ];
 

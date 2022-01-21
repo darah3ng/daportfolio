@@ -9,7 +9,7 @@ import {
 } from '@chakra-ui/react';
 
 import { BsFillBriefcaseFill } from 'react-icons/bs';
-import { FaGraduationCap } from 'react-icons/fa';
+import { FaUserGraduate } from 'react-icons/fa';
 
 import companiesData from '../../data/companies';
 import educationsData from '../../data/educations';
@@ -136,7 +136,7 @@ function Educations({ colorMode }) {
           </Text>
           <Stack pl={3}>
             <Box
-              as={FaGraduationCap}
+              as={FaUserGraduate}
               size="25px"
               color={`mode.${colorMode}.career.subtext`}
             />
@@ -154,6 +154,7 @@ function Educations({ colorMode }) {
           logo={company.logo}
           colorMode={colorMode}
           alt={company.alt}
+          isEducation={true}
         />
       ))}
     </>
