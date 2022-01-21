@@ -1,85 +1,80 @@
 import {
-  Heading,
-  Avatar,
   Box,
   Center,
-  Image,
-  Flex,
+  useColorModeValue,
+  Heading,
   Text,
   Stack,
-  Button,
-  useColorModeValue
+  Flex,
+  Avatar
 } from '@chakra-ui/react';
-import Me from '../../assets/images/me.svg';
+import HumanMe from '../../assets/images/humanme.png';
 
-export default function SocialProfileWithImage() {
+const IMAGE =
+  'https://images.unsplash.com/photo-1591968743883-decc954ccce8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80';
+
+function CardMe() {
   return (
-    <Center py={6}>
+    <Center py={12}>
       <Box
-        maxW={'270px'}
+        role={'group'}
+        p={6}
+        maxW={'330px'}
         w={'full'}
         bg={useColorModeValue('white', 'gray.800')}
         boxShadow={'2xl'}
-        rounded={'md'}
-        overflow={'hidden'}>
-        <Image
-          h={'120px'}
-          w={'full'}
-          src={
-            'https://images.unsplash.com/photo-1612865547334-09cb8cb455da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80'
-          }
-          objectFit={'cover'}
-        />
-        <Flex justify={'center'} mt={-12}>
-          <Avatar
-            bg='yellow.400'
-            size={'xl'}
-            src={Me}
-            alt={'Me'}
-            css={{
-              border: '2px solid white'
-            }}
-          />
-        </Flex>
-
-        <Box p={6}>
-          <Stack spacing={0} align={'center'} mb={5}>
-            <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'}>
-              Dara Heng
-            </Heading>
-            <Text>🇰🇭 🇦🇺</Text>
-            <Text color={'gray.500'}>Web Developer</Text>
-          </Stack>
-
-          <Stack direction={'row'} justify={'center'} spacing={6}>
-            <Stack spacing={0} align={'center'}>
-              <Text fontWeight={600}>23k</Text>
-              <Text fontSize={'sm'} color={'gray.500'}>
-                Followers
-              </Text>
-            </Stack>
-            <Stack spacing={0} align={'center'}>
-              <Text fontWeight={600}>23k</Text>
-              <Text fontSize={'sm'} color={'gray.500'}>
-                Followers
-              </Text>
-            </Stack>
-          </Stack>
-
-          <Button
-            w={'full'}
-            mt={8}
-            bg={useColorModeValue('#151f21', 'gray.900')}
-            color={'white'}
-            rounded={'md'}
-            _hover={{
-              transform: 'translateY(-2px)',
-              boxShadow: 'lg'
-            }}>
-            Follow
-          </Button>
+        rounded={'lg'}
+        pos={'relative'}
+        zIndex={1}>
+        <Box
+          rounded={'lg'}
+          mt={-12}
+          pos={'relative'}
+          height={'100px'}
+          _after={{
+            transition: 'all .3s ease',
+            content: '""',
+            w: 'full',
+            h: 'full',
+            pos: 'absolute',
+            top: 5,
+            left: 0,
+            backgroundImage: `url(${IMAGE})`,
+            filter: 'blur(15px)',
+            zIndex: -1
+          }}
+          _groupHover={{
+            _after: {
+              filter: 'blur(20px)'
+            }
+          }}>
+         <Flex justify={'center'} pt={5}>
+            <Avatar
+              bg='yellow.300'
+              size={'xl'}
+              src={HumanMe}
+              alt={'Me'}
+            />
+          </Flex>
         </Box>
+        <Stack pt={10} align={'center'}>
+          <Heading fontSize={'xl'} fontFamily={'body'} fontWeight={500}>
+            Dara Heng
+          </Heading>
+          <Text color={'gray.500'} fontSize={'sm'}>
+            Full-Stack &#38; Web3
+          </Text>
+
+          <Stack direction={'column'} alignSelf={'start'} pt={5}>
+            <Text fontSize={'sm'}>🧠 &nbsp; A curiosity rover mind</Text>
+            <Text fontSize={'sm'}>🛠 &nbsp; Like building utility tools</Text>
+            <Text fontSize={'sm'}>📷 &nbsp; Enjoy capturing moments</Text>
+            <Text fontSize={'sm'}>🍃 &nbsp; Like being in the woods</Text>
+          </Stack>
+        </Stack>
       </Box>
     </Center>
   );
 }
+
+export default CardMe;
