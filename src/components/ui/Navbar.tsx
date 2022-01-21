@@ -57,7 +57,7 @@ const MenuLinks = ({ isOpen }) => {
         <Logo
           align='center'
           w="100px"
-          color={['white', 'white', 'primary.500', 'primary.500']}
+          color={['white', 'white', 'yellow.500', 'primary.500']}
         />
         <MenuItem to="/">Home</MenuItem>
         <MenuItem to="/about">About</MenuItem>
@@ -77,7 +77,11 @@ const NavBarContainer = ({ children, ...props }) => {
       w="100%"
       mb={8}
       p={8}
-      bg={['primary.500', 'primary.500', 'transparent', 'transparent']}
+      bgGradient={[
+        'linear(to-tr, teal.300, yellow.400)',
+        'linear(to-t, blue.200, teal.500)',
+        'none'
+      ]}
       {...props}
     >
       {children}
