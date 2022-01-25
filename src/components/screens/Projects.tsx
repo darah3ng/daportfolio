@@ -20,7 +20,7 @@ function ProjectsPage() {
 
   return (
     <PageLayout title='projects page'>
-      <Box maxW='2xl' mx={'auto'} px={{ base: 2, sm: 12, md: 17 }}>
+      <Box maxW='48rem' width={{ lg: '40rem' }} mx={'auto'} px={{ base: 2, sm: 12, md: 17 }}>
         <Heading
           as='h2'
           mb={5}

@@ -17,7 +17,7 @@ function AboutPage() {
         width={{ lg: '40rem' }}
         maxWidth="48rem"
         spacing={4}
-        padding="1rem"
+        padding="0 1rem"
         marginLeft="auto"
         marginRight="auto"
       >
