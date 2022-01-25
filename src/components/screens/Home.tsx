@@ -15,7 +15,7 @@ function HomePage() {
     <Stack>
       <Box>
         <Button
-          bgGradient={'linear(to-l, #c2e59c, #64b3f4)'}
+          bgGradient={'linear(to-r, #c2e59c, #64b3f4)'}
           marginLeft={buttonMarginLeft}
           size='sm'
           colorScheme='teal'

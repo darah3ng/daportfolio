@@ -33,26 +33,28 @@ function Company({
       backgroundColor={`mode.${colorMode}.cardBG`}
       position="relative"
       rounded="md"
-      borderWidth="1px"
+      boxShadow={'lg'}
     >
       <Flex justifyContent="space-between">
         <Flex>
-          <Image
-            rounded="full"
-            width={{
-              sm: '4rem',
-              md: '14'
-            }}
-            height={{
-              sm: isEducation ? '4rem' : 'auto',
-              md: 'auto'
-            }}
-            objectFit="cover"
-            src={logo}
-            alt={alt}
-            backgroundColor={`mode.${colorMode}.career.logoBG`}
-          />
-          <Stack spacing={2} pl={4}>
+          {!isEducation && (
+            <Image
+              rounded="full"
+              width={{
+                sm: '4rem',
+                md: '14'
+              }}
+              height={{
+                sm: isEducation ? '4rem' : 'auto',
+                md: 'auto'
+              }}
+              objectFit="cover"
+              src={logo}
+              alt={alt}
+              backgroundColor={`mode.${colorMode}.career.logoBG`}
+            />
+          )}
+          <Stack spacing={2} pl={!isEducation ? 4 : 0}>
             <Heading fontSize="xl" color={`mode.${colorMode}.career.text`}>
               {title}
             </Heading>

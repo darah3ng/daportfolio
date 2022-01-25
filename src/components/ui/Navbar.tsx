@@ -34,7 +34,7 @@ const MenuToggle = ({ toggle, isOpen }) => {
 const MenuItem = ({ children, to = '/', ...rest }) => {
   return (
     <Link href={to}>
-      <Text display="block" {...rest}>
+      <Text display="block" fontSize={'lg'} {...rest}>
         {children}
       </Text>
     </Link>
@@ -60,7 +60,7 @@ const MenuLinks = ({ isOpen }) => {
           color={['white', 'white', 'yellow.500', 'primary.500']}
         />
         <MenuItem to="/">Home</MenuItem>
-        <MenuItem to="/about">About</MenuItem>
+        <MenuItem to="/about">Career</MenuItem>
         <MenuItem to="/projects">Projects</MenuItem>
       </Stack>
     </Box>

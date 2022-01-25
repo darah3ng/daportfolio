@@ -1,6 +1,7 @@
 import {
   Stack,
-  useColorMode
+  useColorMode,
+  Box
 } from '@chakra-ui/react';
 import PageLayout from '../layouts/PageLayout';
 import { Companies, Educations } from '../ui/Career';
@@ -22,6 +23,7 @@ function AboutPage() {
         marginRight="auto"
       >
         <Companies colorMode={colorMode} />
+        <Box pt={5} />
         <Educations colorMode={colorMode} />
       </Stack>
   </PageLayout>
