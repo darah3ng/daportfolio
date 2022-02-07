@@ -76,7 +76,10 @@ const NavBarContainer = ({ children, ...props }) => {
       wrap="wrap"
       w="100%"
       mb={8}
-      p={8}
+      pl={8}
+      pr={8}
+      pt={4}
+      pb={4}
       boxShadow={'md'}
       bgGradient={[
         'linear(to-tr, teal.300, yellow.400)',
