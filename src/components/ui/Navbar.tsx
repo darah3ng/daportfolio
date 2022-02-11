@@ -62,6 +62,14 @@ const MenuLinks = ({ isOpen }) => {
         <MenuItem to="/">Home</MenuItem>
         <MenuItem to="/about">Career</MenuItem>
         <MenuItem to="/projects">Projects</MenuItem>
+        <MenuItem
+          to="/artanimation"
+          bgGradient={'linear(to-tr, teal.400, yellow.500)'}
+          bgClip='text'
+          fontWeight={'bold'
+        }>
+          3D
+        </MenuItem>
       </Stack>
     </Box>
   );

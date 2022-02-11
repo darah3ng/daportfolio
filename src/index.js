@@ -6,6 +6,6 @@ import customTheme from './theme/customTheme';
 ReactDOM.render(
   <ChakraProvider theme={customTheme}>
     <App />
-    </ChakraProvider>,
+  </ChakraProvider>,
   document.getElementById('root')
 );
