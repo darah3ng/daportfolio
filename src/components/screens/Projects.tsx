@@ -4,7 +4,8 @@ import {
   SimpleGrid,
   useColorMode,
   Heading,
-  Link
+  Link,
+  Spinner
 } from '@chakra-ui/react';
 import PageLayout from '../layouts/PageLayout';
 import ProjectCard from '../ui/ProjectCard';
@@ -12,10 +13,14 @@ import { getAllGitHubRepos } from '../../data/githubProjects';
 
 function ProjectsPage() {
   const [repos, setRepos] = useState<any[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const { colorMode } = useColorMode();
 
   useEffect(() => {
-    getAllGitHubRepos().then(repos => { setRepos(repos); });
+    setIsLoading(true);
+    getAllGitHubRepos()
+      .then(repos => setRepos(repos))
+      .then(() => setIsLoading(false));
   }, []);
 
   return (
@@ -36,6 +41,12 @@ function ProjectsPage() {
           textDecorationLine={'underline'}>
             See more
         </Link> 👈😎
+
+        {isLoading && (
+          <Box mt={5}>
+            <Spinner />
+          </Box>
+        )}
 
         <SimpleGrid mt={5} columns={{ base: 1, md: 2 }} spacing={{ base: 5, lg: 8 }}>
           {repos.map(repo => (
