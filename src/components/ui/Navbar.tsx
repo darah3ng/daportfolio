@@ -64,7 +64,7 @@ const MenuLinks = ({ isOpen }) => {
         <MenuItem to="/projects">Projects</MenuItem>
         <MenuItem
           to="/artanimation"
-          bgGradient={'linear(to-tr, teal.400, yellow.500)'}
+          bgGradient={'linear(to-r, #40E0D0, #FF8C00, #FF0080)'}
           bgClip='text'
           fontWeight={'bold'
         }>
