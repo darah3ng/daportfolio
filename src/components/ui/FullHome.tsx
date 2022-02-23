@@ -1,4 +1,4 @@
-import { Stack, Heading, Text, useColorMode } from '@chakra-ui/react';
+import { Stack, Heading, Text, useColorMode, VStack } from '@chakra-ui/react';
 import ComponentLayout from '../layouts/ComponentLayout';
 
 function FullHome() {
@@ -6,17 +6,18 @@ function FullHome() {
 
   return (
     <ComponentLayout title='Full home page'>
-      <Stack
+      <VStack
         as="main"
         padding="1.5rem"
         color="#2D3748"
-        backgroundColor={`mode.${colorMode}.background`}
         marginLeft="auto"
         marginRight="auto"
         width={{ lg: '40rem' }}
         maxWidth="48rem"
+        spacing={'10'}
+        alignItems={'flex-start'}
       >
-        <Stack spacing={5} marginBottom={8}>
+        <Stack spacing={5}>
           <Heading color={`mode.${colorMode}.text`} display="flex">
             Howdy, I'm Dara 👋
           </Heading>
@@ -28,7 +29,7 @@ function FullHome() {
           </Text>
         </Stack>
 
-        <Stack marginBottom={8}>
+        <Stack>
           <Heading color={`mode.${colorMode}.text`}>Skills</Heading>
           <Stack
             padding={4}
@@ -45,7 +46,7 @@ function FullHome() {
             <Text>⛓ Truffle, Ganache, Hardhat</Text>
           </Stack>
         </Stack>
-      </Stack>
+      </VStack>
     </ComponentLayout>
   );
 };

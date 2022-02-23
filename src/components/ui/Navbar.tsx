@@ -83,12 +83,12 @@ const NavBarContainer = ({ children, ...props }) => {
       justify="space-between"
       wrap="wrap"
       w="100%"
-      mb={8}
       pl={8}
       pr={8}
       pt={4}
       pb={4}
-      boxShadow={'md'}
+      mb={8}
+      shadow={'md'}
       bgGradient={[
         'linear(to-tr, teal.300, yellow.400)',
         'linear(to-t, blue.200, teal.500)',

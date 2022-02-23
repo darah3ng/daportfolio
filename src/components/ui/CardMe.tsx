@@ -8,7 +8,7 @@ import {
   Flex,
   Avatar
 } from '@chakra-ui/react';
-import HumanMe from '../../assets/images/humanme.png';
+import HumanMe from '../../assets/images/humanme.jpeg';
 import ComponentLayout from '../layouts/ComponentLayout';
 
 const IMAGE =

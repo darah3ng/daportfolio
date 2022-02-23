@@ -5,11 +5,14 @@ import {
   useColorMode,
   Heading,
   Link,
-  Spinner
+  Spinner,
+  VStack
 } from '@chakra-ui/react';
 import PageLayout from '../layouts/PageLayout';
 import ProjectCard from '../ui/ProjectCard';
+import ProjectShowCard from '../ui/ProjectShowCard';
 import { getAllGitHubRepos } from '../../data/githubProjects';
+import projectShowCardData from '../../data/projectsShowcase';
 
 function ProjectsPage() {
   const [repos, setRepos] = useState<any[]>([]);
@@ -35,12 +38,23 @@ function ProjectsPage() {
           Open Source Projects
         </Heading>
 
-        <Link
-          href='https://github.com/darah3ng?tab=repositories'
-          isExternal
-          textDecorationLine={'underline'}>
-            See more
-        </Link> 👈😎
+        <VStack mb={5} spacing={5}>
+          {projectShowCardData.map((data, index) => (
+            <Box key={index} width={'100%'}>
+              <ProjectShowCard name={data.name} description={data.description} website={data.website} link={data.link} techstack={data.techstack} index={index} />
+            </Box>
+          ))}
+        </VStack>
+
+        <Box textAlign={'center'}>
+          <Link
+            href='https://github.com/darah3ng?tab=repositories'
+            isExternal
+            textDecorationLine={'underline'}
+          >
+              See more
+          </Link> 👈😎
+        </Box>
 
         {isLoading && (
           <Box mt={5}>

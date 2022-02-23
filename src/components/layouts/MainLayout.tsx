@@ -1,4 +1,6 @@
-import { Flex, useColorMode } from '@chakra-ui/react';
+import { Flex, useColorMode, Box } from '@chakra-ui/react';
+import Header from '../sections/Header';
+import Footer from '../sections/Footer';
 import customTheme from '../../theme/customTheme';
 import Routes from '../../Routes';
 
@@ -12,17 +14,23 @@ const Layout = (props) => {
   const brandColorTheme = customTheme.colors.mode[colorMode || 'light'];
 
   return (
-    <div style={{ minHeight: '90vh', background: brandColorTheme.background }}>
-      <Flex
-        direction='column'
-        align='center'
-        maxW={{ xl: '1200px' }}
-        m='0 auto'
-        {...props}
-      >
-        <Routes />
-      </Flex>
-    </div>
+    <Box>
+      <Header />
+
+      <Box minHeight={'50vh'}>
+        <Flex
+          direction='column'
+          align='center'
+          maxW={{ xl: '1200px' }}
+          m='0 auto'
+          {...props}
+        >
+          <Routes />
+        </Flex>
+      </Box>
+
+      <Footer />
+    </Box>
   );
 };
 
