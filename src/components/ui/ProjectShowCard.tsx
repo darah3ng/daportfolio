@@ -22,7 +22,7 @@ interface projectData {
 function ProjectShowCard({ name, description, website, link, techstack, index }: projectData) {
   const { colorMode } = useColorMode();
   const bgLight = 'linear(to-r, #cccace, #e6e4e7, #f2f2f3)';
-  const bgDark = 'linear(to-r, #a64de5, #bc79ec)';
+  const bgDark = 'linear(to-r, #f46b45, #eea849)';
 
   return (
     <HStack
