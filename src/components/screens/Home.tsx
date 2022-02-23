@@ -9,18 +9,20 @@ function HomePage() {
   const [showCard, setShowCard] = useState(false);
   const buttonRightIcon = showCard ? <AiOutlineDoubleLeft /> : <AiOutlineDoubleRight />;
   const buttonMarginLeft = showCard ? 0 : '1.5em';
-  const buttonText = showCard ? 'Back' : 'Bio';
+  const buttonText = showCard ? 'back' : 'bio';
 
   return (
     <Stack>
       <Box>
         <Button
-          bgGradient={'linear(to-r, #c2e59c, #64b3f4)'}
+          bgGradient={'linear(to-r, #fc4a1a, #f7b733)'}
+          _hover={{ bgGradient: 'linear(to-r, #f12711, #f5af19)' }}
           marginLeft={buttonMarginLeft}
           size='sm'
-          colorScheme='teal'
           onClick={() => setShowCard(!showCard)}
           rightIcon={buttonRightIcon}
+          color='whiteAlpha.800'
+          fontWeight={'bold'}
         >
           {buttonText}
         </Button>

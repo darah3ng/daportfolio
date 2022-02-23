@@ -1,5 +1,6 @@
-import { Stack, Heading, Text, useColorMode, VStack } from '@chakra-ui/react';
+import { Stack, Heading, Text, useColorMode, VStack, HStack, Link, Box } from '@chakra-ui/react';
 import ComponentLayout from '../layouts/ComponentLayout';
+import ScrollingText from '../ui/ScrollingText';
 
 function FullHome() {
   const { colorMode } = useColorMode();
@@ -46,6 +47,24 @@ function FullHome() {
             <Text>⛓ Truffle, Ganache, Hardhat</Text>
           </Stack>
         </Stack>
+
+        <HStack w='100%' spacing={5}>
+          <Heading color={`mode.${colorMode}.career.subtext`}>
+            Check out my{' '}
+            <Link
+              borderBottom={'2px'}
+              pb={2}
+              href='/projects'
+              _hover={{ textDecoration: 'none', color: '#9c9a96' }}
+              textDecoration={'none'}
+            >
+              projects.
+            </Link>
+          </Heading>
+          <Box>
+            <ScrollingText />
+          </Box>
+        </HStack>
       </VStack>
     </ComponentLayout>
   );

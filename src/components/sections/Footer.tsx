@@ -14,7 +14,7 @@ function Footer() {
 
   return (
     <Flex as='footer' justifyContent='center' mb={5}>
-      <HStack direction={'row'} justifyContent='center' spacing={16} mt={10}>
+      <HStack direction={'row'} justifyContent='center' spacing={['none', 14, 16]} mt={10}>
         <Link href='https://github.com/darah3ng' isExternal color={`mode.${colorMode}.career.subtext`} _hover={hoverTextColor}>
           <Icon as={GrGithub} w='6' h='6' />
         </Link>
