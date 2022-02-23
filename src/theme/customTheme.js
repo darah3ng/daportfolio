@@ -14,9 +14,6 @@ const customTheme = {
     ...theme.colors,
     ...customColors
   },
-  config: {
-    initialColorMode: 'dark'
-  },
   styles: {
     global: (props) => ({
       body: {

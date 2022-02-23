@@ -51,6 +51,7 @@ function ProjectsPage() {
             href='https://github.com/darah3ng?tab=repositories'
             isExternal
             textDecorationLine={'underline'}
+            color={`mode.${colorMode}.text`}
           >
               See more
           </Link> 👈😎
