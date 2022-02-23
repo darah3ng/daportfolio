@@ -14,7 +14,6 @@ function AboutPage() {
       <Stack
         as="main"
         color="#2D3748"
-        backgroundColor={`mode.${colorMode}.background`}
         width={{ lg: '40rem' }}
         maxWidth="48rem"
         spacing={4}
