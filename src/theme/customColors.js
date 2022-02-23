@@ -77,7 +77,7 @@ const customColors = {
   mode: {
     light: {
       logo: '#102a43',
-      background: '#fff',
+      background: '#f0f0f0',
       cardBG: '#fff',
       tagBG: '#EBF8FF',
       border: '#e2e8f0',

@@ -84,8 +84,8 @@ const NavBarContainer = ({ children, ...props }) => {
       justify="space-between"
       wrap="wrap"
       w="100%"
-      pl={8}
-      pr={8}
+      pl={10}
+      pr={10}
       pt={4}
       pb={4}
       mb={8}
@@ -110,7 +110,7 @@ const NavBar = (props) => {
     <NavBarContainer {...props}>
       <MenuToggle toggle={onToggle} isOpen={isOpen} />
       <MenuLinks isOpen={isOpen} colorMode={colorMode} />
-      <Button mt={[5, 5, 0]} onClick={toggleColorMode}>
+      <Button mt={[5, 5, 0]} onClick={toggleColorMode} bg={'transparent'}>
         {colorMode === 'light' ? <MoonIcon /> : <SunIcon color={'orange'} />}
       </Button>
     </NavBarContainer>
