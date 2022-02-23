@@ -6,6 +6,7 @@ import {
   useColorMode
 } from '@chakra-ui/react';
 import { GrLinkedin, GrInstagram, GrGithub } from 'react-icons/gr';
+import { HiOutlineMail } from 'react-icons/hi';
 
 function Footer() {
   const { colorMode } = useColorMode();
@@ -22,6 +23,9 @@ function Footer() {
         </Link>
         <Link href='https://www.instagram.com/dara.h3ng/' isExternal color={`mode.${colorMode}.career.subtext`} _hover={hoverTextColor}>
           <Icon as={GrInstagram} w='6' h='6' />
+        </Link>
+        <Link href='mailto:darah3ng@gmail.com' isExternal color={`mode.${colorMode}.career.subtext`} _hover={hoverTextColor}>
+          <Icon as={HiOutlineMail} w='7' h='7' />
         </Link>
       </HStack>
     </Flex>
