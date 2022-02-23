@@ -55,7 +55,7 @@ function FullHome() {
               borderBottom={'2px'}
               pb={2}
               href='/projects'
-              _hover={{ textDecoration: 'none', color: '#9c9a96' }}
+              _hover={{ textDecoration: 'none', color: '#fc4a1a' }}
               textDecoration={'none'}
             >
               projects.
