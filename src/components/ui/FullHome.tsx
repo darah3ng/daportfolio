@@ -49,7 +49,7 @@ function FullHome() {
         </Stack>
 
         <HStack w='100%' spacing={5}>
-          <Heading color={`mode.${colorMode}.career.subtext`}>
+          <Heading color={`mode.${colorMode}.career.subtext`} fontSize={['sm', 'md', '3xl', '4xl']}>
             Check out my{' '}
             <Link
               borderBottom={'2px'}

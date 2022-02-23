@@ -41,13 +41,14 @@ const MenuItem = ({ children, to = '/', ...rest }) => {
   );
 };
 
-const MenuLinks = ({ isOpen }) => {
+const MenuLinks = ({ isOpen, colorMode }) => {
   return (
     <Box
       display={{ base: isOpen ? 'block' : 'none', md: 'block' }}
       flexBasis={{ base: '100%', md: 'auto' }}
     >
       <Stack
+        color={`mode.${colorMode}.career.text`}
         spacing={8}
         align="center"
         justify={['center', 'space-between', 'flex-end', 'flex-end']}
@@ -90,8 +91,8 @@ const NavBarContainer = ({ children, ...props }) => {
       mb={8}
       shadow={'md'}
       bgGradient={[
-        'linear(to-tr, teal.300, yellow.400)',
-        'linear(to-t, blue.200, teal.500)',
+        'linear(to-r, #FF4E50, #F9D423)',
+        'linear(to-r, #FFB75E, #ED8F03)',
         'none'
       ]}
       {...props}
@@ -108,9 +109,9 @@ const NavBar = (props) => {
   return (
     <NavBarContainer {...props}>
       <MenuToggle toggle={onToggle} isOpen={isOpen} />
-      <MenuLinks isOpen={isOpen} />
+      <MenuLinks isOpen={isOpen} colorMode={colorMode} />
       <Button mt={[5, 5, 0]} onClick={toggleColorMode}>
-        {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+        {colorMode === 'light' ? <MoonIcon /> : <SunIcon color={'orange'} />}
       </Button>
     </NavBarContainer>
   );

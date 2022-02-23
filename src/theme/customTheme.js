@@ -1,6 +1,9 @@
 import { theme } from '@chakra-ui/react';
-import { createBreakpoints } from '@chakra-ui/theme-tools';
+import { createBreakpoints, mode } from '@chakra-ui/theme-tools';
 import customColors from './customColors';
+
+const dark = 'linear-gradient(to right, #141E30, #243B55)';
+const light = '#f0f0f0';
 
 const customTheme = {
   ...theme,
@@ -10,6 +13,16 @@ const customTheme = {
   colors: {
     ...theme.colors,
     ...customColors
+  },
+  config: {
+    initialColorMode: 'dark'
+  },
+  styles: {
+    global: (props) => ({
+      body: {
+        bg: mode(light, dark)(props)
+      }
+    })
   },
   fonts: {
     body: 'Inter, sans-serif',

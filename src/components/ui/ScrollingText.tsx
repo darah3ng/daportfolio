@@ -24,7 +24,7 @@ function ScrollingText() {
         position: 'relative',
         width: '100%',
         height: 60,
-        overflow: 'auto',
+        overflow: 'hidden',
         fontSize: '0.75em'
       }}
       scrollTop={scroll}>
