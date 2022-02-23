@@ -31,7 +31,7 @@ function ProjectShowCard({ name, description, website, link, techstack, index }:
       p={4}
       bgGradient={colorMode === 'light' ? bgLight : bgDark}
     >
-      <Flex mt={3} justifyContent="space-between" width={'100%'} maxW={'130px'} alignContent="center">
+      <Flex mt={4} justifyContent="space-between" width={'100%'} maxW={'130px'} alignContent="center">
         <Box
           lineHeight="tight"
           isTruncated
@@ -54,7 +54,7 @@ function ProjectShowCard({ name, description, website, link, techstack, index }:
             <Text>{description}</Text>
           </Box>
 
-          <HStack as="span" mt={3} color={`mode.${colorMode}.subtext`} fontSize='sm'>
+          <HStack as="span" mt={4} color={`mode.${colorMode}.subtext`} fontSize='sm'>
             <Link
               isExternal
               href={website}
