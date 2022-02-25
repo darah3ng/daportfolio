@@ -24,10 +24,10 @@ const Logo = (props) => {
   );
 };
 
-const MenuToggle = ({ toggle, isOpen }) => {
+const MenuToggle = ({ toggle, isOpen, svgColor }) => {
   return (
     <Box display={{ base: 'block', md: 'none' }} onClick={toggle}>
-      {isOpen ? <CloseIcon /> : <HamburgerIcon />}
+      {isOpen ? <CloseIcon color={svgColor} /> : <HamburgerIcon color={svgColor} />}
     </Box>
   );
 };
@@ -91,11 +91,6 @@ const NavBarContainer = ({ children, ...props }) => {
       pb={4}
       mb={8}
       shadow={'md'}
-      bgGradient={[
-        'linear(to-r, #FF4E50, #F9D423)',
-        'linear(to-r, #FFB75E, #ED8F03)',
-        'none'
-      ]}
       {...props}
     >
       {children}
@@ -113,7 +108,7 @@ const NavBar = (props) => {
 
   return (
     <NavBarContainer {...props}>
-      <MenuToggle toggle={onToggle} isOpen={isOpen} />
+      <MenuToggle toggle={onToggle} svgColor={svgColor} isOpen={isOpen} />
       <MenuLinks isOpen={isOpen} colorMode={colorMode} />
       <Button mt={[5, 5, 0]} onClick={toggleColorMode} bg={'transparent'} _hover={{ bg: 'transparent' }}>
         {colorMode === 'light' ? moon : sun}
