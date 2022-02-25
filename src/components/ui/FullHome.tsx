@@ -3,6 +3,38 @@ import ComponentLayout from '../layouts/ComponentLayout';
 import ScrollingText from '../ui/ScrollingText';
 import Boop from '../animations/Boop.jsx';
 
+const CustomLink = ({ text, href }) => {
+  const beforeStyle = {
+    content: '""',
+    backgroundColor: '#ee8011',
+    position: 'absolute',
+    left: 0,
+    bottom: '1px',
+    width: '100%',
+    height: '4px',
+    zIndex: -1,
+    transition: 'all .3s ease-in-out'
+  };
+
+  const beforeHoverStyle = {
+    textDecoration: 'none',
+    _before: { bottom: 0, height: '100%' }
+  };
+
+  return (
+    <Link
+      textDecoration={'none'}
+      position={'relative'}
+      href={href}
+      _hover={beforeHoverStyle}
+      _before={beforeStyle}
+      isExternal
+    >
+      {text}
+    </Link>
+  );
+};
+
 function FullHome() {
   const { colorMode } = useColorMode();
 
@@ -25,6 +57,9 @@ function FullHome() {
           </Heading>
           <Text color={`mode.${colorMode}.subtext`}>
             I am a web dev, and a blockchain lover.
+          </Text>
+          <Text color={`mode.${colorMode}.subtext`} fontWeight='bold'>
+            Used to just <CustomLink href='https://academy.binance.com/en/glossary/hodl' text='HODL' /> - now I <CustomLink href='https://academy.binance.com/en/glossary/buidl' text='BUIDL' />.
           </Text>
           <Text color={`mode.${colorMode}.subtext`}>
             This is my digital studio, where I present the things I've worked on and share what I've learned.
