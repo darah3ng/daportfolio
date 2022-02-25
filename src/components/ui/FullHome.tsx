@@ -1,6 +1,7 @@
 import { Stack, Heading, Text, useColorMode, VStack, HStack, Link, Box } from '@chakra-ui/react';
 import ComponentLayout from '../layouts/ComponentLayout';
 import ScrollingText from '../ui/ScrollingText';
+import Boop from '../animations/Boop.jsx';
 
 function FullHome() {
   const { colorMode } = useColorMode();
@@ -20,7 +21,7 @@ function FullHome() {
       >
         <Stack spacing={5}>
           <Heading color={`mode.${colorMode}.text`} display="flex">
-            Howdy, I'm Dara 👋
+            Howdy, I'm Dara &nbsp;<Boop rotation={30} timing={200} scale={1.1}>👋</Boop>
           </Heading>
           <Text color={`mode.${colorMode}.subtext`}>
             I am a web dev, and a blockchain lover.

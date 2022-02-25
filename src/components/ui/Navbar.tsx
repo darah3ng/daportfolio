@@ -11,6 +11,7 @@ import {
   useDisclosure
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon, CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
+import Boop from '../animations/Boop.jsx';
 import Me from '../../assets/images/me.svg';
 
 const Logo = (props) => {
@@ -106,12 +107,16 @@ const NavBar = (props) => {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onToggle } = useDisclosure();
 
+  const svgColor = `mode.${colorMode}.text`;
+  const moon = <Boop rotation={30} timing={200}><MoonIcon color={svgColor} w={5} h={5} /></Boop>;
+  const sun = <Boop rotation={30} timing={200}><SunIcon color={svgColor} w={5} h={5} /></Boop>;
+
   return (
     <NavBarContainer {...props}>
       <MenuToggle toggle={onToggle} isOpen={isOpen} />
       <MenuLinks isOpen={isOpen} colorMode={colorMode} />
-      <Button mt={[5, 5, 0]} onClick={toggleColorMode} bg={'transparent'}>
-        {colorMode === 'light' ? <MoonIcon /> : <SunIcon color={'orange'} />}
+      <Button mt={[5, 5, 0]} onClick={toggleColorMode} bg={'transparent'} _hover={{ bg: 'transparent' }}>
+        {colorMode === 'light' ? moon : sun}
       </Button>
     </NavBarContainer>
   );
