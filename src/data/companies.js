@@ -1,8 +1,17 @@
 
 import CSIROLogo from '../assets/images/csiro.svg';
 import RexlabsLogo from '../assets/images/rexlabs.svg';
+import Astronaut from '../assets/images/astronaut.svg';
 
 const companies = [
+  {
+    title: 'Freelance',
+    alt: 'FL image',
+    role: 'Software / Blockchain Developer',
+    skills: 'Typescript, Javascript, React, Solidity, IFPS, Hardhat, Alchemy',
+    period: '2022 - Present',
+    logo: Astronaut
+  },
   {
     title: 'Rexlabs',
     alt: 'RX image',

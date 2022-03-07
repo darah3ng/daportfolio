@@ -30,6 +30,7 @@ function Company({
       paddingY={5}
       _hover={{ shadow: 'md' }}
       borderColor={`mode.${colorMode}.border`}
+      backgroundColor={`mode.${colorMode}.cardBG`}
       position="relative"
       rounded="md"
       boxShadow={'lg'}

@@ -2,6 +2,14 @@ import GraduationHat from '../assets/images/graduationhat.png';
 
 const educations = [
   {
+    title: 'Australian Computer Society',
+    alt: 'ACS logo',
+    role: 'Professional Year Program',
+    skills: 'Career prospect enhancement',
+    period: '2018 - 2018',
+    logo: GraduationHat
+  },
+  {
     title: 'Queensland University of Technology',
     alt: 'QUT logo',
     role: "Bachelor's Degree in Computer Science",
