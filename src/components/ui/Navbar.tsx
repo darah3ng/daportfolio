@@ -62,15 +62,13 @@ const MenuLinks = ({ isOpen, colorMode }) => {
           color={['white', 'white', 'yellow.500', 'primary.500']}
         />
         <MenuItem to="/">Home</MenuItem>
-        <MenuItem to="/about">Career</MenuItem>
+        <MenuItem to="/career">Career</MenuItem>
         <MenuItem to="/projects">Projects</MenuItem>
         <MenuItem
           to="/artanimation"
-          bgGradient={'linear(to-r, #40E0D0, #FF8C00, #FF0080)'}
-          bgClip='text'
-          fontWeight={'bold'
-        }>
-          3D
+          fontWeight={'bold'}
+        >
+          <Boop rotation={10} timing={200}>3D</Boop>
         </MenuItem>
       </Stack>
     </Box>

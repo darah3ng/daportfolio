@@ -8,15 +8,18 @@ import Homepage from './components/screens/Home';
 import AboutPage from './components/screens/About';
 import ProjectsPage from './components/screens/Projects';
 import { ArtAnimation } from './components/screens/ArtAnimation';
+import PageNotFound from './components/screens/NotFound';
 
 function Routes() {
   return (
     <Router>
       <Switch>
         <Route exact path="/" component={Homepage} />
-        <Route exact path="/about" component={AboutPage} />
-        <Route path="/projects" component={ProjectsPage} />
-        <Route path="/artanimation" component={ArtAnimation} />
+        <Route exact path="/career" component={AboutPage} />
+        <Route exact path="/projects" component={ProjectsPage} />
+        <Route exact path="/artanimation" component={ArtAnimation} />
+
+        <Route path="*" component={PageNotFound} />
       </Switch>
   </Router>
   );

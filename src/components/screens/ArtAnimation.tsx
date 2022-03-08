@@ -1,12 +1,13 @@
 import { useState } from 'react';
-import { Box, Spinner } from '@chakra-ui/react';
+import { Box, Spinner, useColorMode } from '@chakra-ui/react';
 
 function ArtAnimation() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const { colorMode } = useColorMode();
 
   return (
     <>
-      {isLoading && <Spinner />}
+      {isLoading && <Spinner color={`mode.${colorMode}.text`} />}
 
       <Box
         as='iframe'
