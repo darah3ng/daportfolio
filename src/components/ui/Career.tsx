@@ -34,6 +34,7 @@ function Company({
       position="relative"
       rounded="md"
       boxShadow={'lg'}
+      w={['200px', '100%']}
     >
       <Flex justifyContent="space-between">
         <Flex>

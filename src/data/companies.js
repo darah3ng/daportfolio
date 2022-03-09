@@ -8,7 +8,7 @@ const companies = [
     title: 'Freelance',
     alt: 'FL image',
     role: 'Software / Blockchain Developer',
-    skills: 'Typescript, Javascript, React, Solidity, IFPS, Hardhat, Alchemy',
+    skills: 'Typescript, React, Solidity, Hardhat',
     period: '2022 - Present',
     logo: Astronaut
   },
