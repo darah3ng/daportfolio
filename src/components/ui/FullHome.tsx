@@ -65,7 +65,7 @@ function FullHome() {
           </HStack>
           </Box>
           <Text color={`mode.${colorMode}.subtext`}>
-            I am a web dev, and a blockchain lover.
+            Your local friendly software dev, and a blockchain lover.
           </Text>
           <Text color={`mode.${colorMode}.subtext`} fontWeight='bold'>
             Used to just <CustomLink href='https://academy.binance.com/en/glossary/hodl' text='HODL' /> - now I <CustomLink href='https://academy.binance.com/en/glossary/buidl' text='BUIDL' />.
