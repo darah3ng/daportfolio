@@ -59,7 +59,7 @@ function FullHome() {
               <Heading color={`mode.${colorMode}.text`} display="flex">
                 Howdy, I'm Dara
               </Heading>
-              <Boop rotation={30} timing={200} scale={1.1}>
+              <Boop rotation={30} timing={200} scale={1.0}>
                 <Image src={Flatpalm} width='100px' height='100px' transform={'rotate(-25deg)'} />
               </Boop>
           </HStack>
