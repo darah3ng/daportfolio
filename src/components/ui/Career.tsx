@@ -8,8 +8,8 @@ import {
   Image
 } from '@chakra-ui/react';
 
-import { BsFillBriefcaseFill } from 'react-icons/bs';
-import { FaUserGraduate } from 'react-icons/fa';
+import Breifcase from '../../assets/images/briefcase.png';
+import Award from '../../assets/images/award.png';
 
 import companiesData from '../../data/companies';
 import educationsData from '../../data/educations';
@@ -105,10 +105,13 @@ function Companies({ colorMode }) {
           </Text>
           <Stack pl={3}>
             <Box
-              as={BsFillBriefcaseFill}
-              size="25px"
+              as='image'
+              width='50px'
+              height='50px'
               color={`mode.${colorMode}.career.subtext`}
-            />
+            >
+              <Image src={Breifcase} />
+            </Box>
           </Stack>
         </Flex>
       </Heading>
@@ -139,10 +142,13 @@ function Educations({ colorMode }) {
           </Text>
           <Stack pl={3}>
             <Box
-              as={FaUserGraduate}
-              size="25px"
+              as='image'
+              width='45px'
+              height='45px'
               color={`mode.${colorMode}.career.subtext`}
-            />
+            >
+              <Image src={Award} />
+            </Box>
           </Stack>
         </Flex>
       </Heading>
