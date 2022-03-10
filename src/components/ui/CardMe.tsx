@@ -20,7 +20,7 @@ function CardMe() {
         <Box
           role={'group'}
           p={6}
-          maxW={'330px'}
+          maxW={'260px'}
           w={'full'}
           boxShadow={'2xl'}
           rounded={'lg'}
