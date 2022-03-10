@@ -44,7 +44,6 @@ function FullHome() {
     <ComponentLayout title='Full home page'>
       <VStack
         as="main"
-        padding="1.5rem"
         color="#2D3748"
         marginLeft="auto"
         marginRight="auto"

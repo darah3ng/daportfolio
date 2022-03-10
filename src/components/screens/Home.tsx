@@ -1,34 +1,36 @@
 import { useState } from 'react';
-import { Button, Box, Stack } from '@chakra-ui/react';
-import { AiOutlineDoubleRight, AiOutlineDoubleLeft } from 'react-icons/ai';
+import { Box, Stack } from '@chakra-ui/react';
 
+import PageLayout from '../layouts/PageLayout';
 import FullHome from '../ui/FullHome';
 import CardMe from '../ui/CardMe';
+import PushDownButton from '../ui/PushDownButton';
 
 function HomePage() {
   const [showCard, setShowCard] = useState(false);
-  const buttonRightIcon = showCard ? <AiOutlineDoubleLeft /> : <AiOutlineDoubleRight />;
-  const buttonMarginLeft = showCard ? 0 : '1.5em';
-  const buttonText = showCard ? 'back' : 'bio';
+  const buttonText = showCard ? 'back' : 'push me';
+
+  const toggleShowCard = () => {
+    setShowCard(!showCard);
+  };
 
   return (
-    <Stack>
+    <PageLayout title='page not found'>
+    <Stack
+      maxW='48rem'
+      width={{ lg: '40rem' }}
+      padding='1.5rem'
+    >
       <Box>
-        <Button
-          bgGradient={'linear(to-r, #fc4a1a, #f7b733)'}
-          _hover={{ bgGradient: 'linear(to-r, #f12711, #f5af19)' }}
-          marginLeft={buttonMarginLeft}
-          size='sm'
-          onClick={() => setShowCard(!showCard)}
-          rightIcon={buttonRightIcon}
-          color='whiteAlpha.800'
-          fontWeight={'bold'}
-        >
-          {buttonText}
-        </Button>
+        <PushDownButton
+          buttonText={buttonText}
+          setShowCard={toggleShowCard}
+        />
       </Box>
+
       {showCard ? <CardMe /> : <FullHome />}
     </Stack>
+    </PageLayout>
   );
 };
 
