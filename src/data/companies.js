@@ -1,16 +1,23 @@
-
 import CSIROLogo from '../assets/images/csiro.svg';
 import RexlabsLogo from '../assets/images/rexlabs.svg';
 import Astronaut from '../assets/images/astronaut.svg';
 
 const companies = [
   {
+    title: 'Serenade',
+    alt: 'SR image',
+    role: 'Software / Blockchain Developer',
+    skills: 'Typescript, Next JS, Nest JS, Polygon, Solidity, Hardhat',
+    period: '2022 - Present',
+    logo: Astronaut,
+  },
+  {
     title: 'Freelance',
     alt: 'FL image',
     role: 'Software / Blockchain Developer',
     skills: 'Typescript, React, Solidity, Hardhat',
-    period: '2022 - Present',
-    logo: Astronaut
+    period: '2021 - Present',
+    logo: Astronaut,
   },
   {
     title: 'Rexlabs',
@@ -18,7 +25,7 @@ const companies = [
     role: 'Software Developer',
     skills: 'Typescript, Javascript, React, Laravel, PHP',
     period: '2018 - 2021',
-    logo: RexlabsLogo
+    logo: RexlabsLogo,
   },
   {
     title: 'CSIRO',
@@ -26,8 +33,8 @@ const companies = [
     role: 'Industrial Trainee',
     skills: 'Java, MySQL, PostgreSQL',
     period: '2017 - 2017',
-    logo: CSIROLogo
-  }
+    logo: CSIROLogo,
+  },
 ];
 
 export default companies;
