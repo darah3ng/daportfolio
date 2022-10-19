@@ -5,8 +5,9 @@ import {
   Text,
   Stack,
   Flex,
-  Avatar
+  Avatar,
 } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 import HumanMe from '../../assets/images/humanme.jpeg';
 import ComponentLayout from '../layouts/ComponentLayout';
 
@@ -15,7 +16,7 @@ const IMAGE =
 
 function CardMe() {
   return (
-    <ComponentLayout title='Card me'>
+    <ComponentLayout title="Card me">
       <Center py={12}>
         <Box
           role={'group'}
@@ -26,7 +27,8 @@ function CardMe() {
           rounded={'lg'}
           pos={'relative'}
           bg={'white'}
-          zIndex={1}>
+          zIndex={1}
+        >
           <Box
             rounded={'lg'}
             mt={-12}
@@ -42,20 +44,16 @@ function CardMe() {
               left: 0,
               backgroundImage: `url(${IMAGE})`,
               filter: 'blur(10px)',
-              zIndex: -1
+              zIndex: -1,
             }}
             _groupHover={{
               _after: {
-                filter: 'blur(20px)'
-              }
-            }}>
-          <Flex justify={'center'} pt={5}>
-              <Avatar
-                bg='yellow.300'
-                size={'xl'}
-                src={HumanMe}
-                alt={'Me'}
-              />
+                filter: 'blur(20px)',
+              },
+            }}
+          >
+            <Flex justify={'center'} pt={5}>
+              <Avatar bg="yellow.300" size={'xl'} src={HumanMe} alt={'Me'} />
             </Flex>
           </Box>
           <Stack pt={10} align={'center'}>
@@ -76,6 +74,22 @@ function CardMe() {
         </Box>
       </Center>
     </ComponentLayout>
+  );
+}
+
+export function AnimationCardMe() {
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 0.8,
+        delay: 0.2,
+        ease: [0, 0.71, 0.2, 1.01],
+      }}
+    >
+      <CardMe />
+    </motion.div>
   );
 }
 

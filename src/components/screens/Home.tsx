@@ -3,7 +3,7 @@ import { Box, Stack } from '@chakra-ui/react';
 
 import PageLayout from '../layouts/PageLayout';
 import FullHome from '../ui/FullHome';
-import CardMe from '../ui/CardMe';
+import { AnimationCardMe } from '../ui/CardMe';
 import PushDownButton from '../ui/PushDownButton';
 
 function HomePage() {
@@ -15,23 +15,19 @@ function HomePage() {
   };
 
   return (
-    <PageLayout title='page not found'>
-    <Stack
-      maxW='48rem'
-      width={{ lg: '40rem' }}
-      padding='1.5rem'
-    >
-      <Box>
-        <PushDownButton
-          buttonText={buttonText}
-          setShowCard={toggleShowCard}
-        />
-      </Box>
+    <PageLayout title="page not found">
+      <Stack maxW="48rem" width={{ lg: '40rem' }} padding="1.5rem">
+        <Box>
+          <PushDownButton
+            buttonText={buttonText}
+            setShowCard={toggleShowCard}
+          />
+        </Box>
 
-      {showCard ? <CardMe /> : <FullHome />}
-    </Stack>
+        {showCard ? <AnimationCardMe /> : <FullHome />}
+      </Stack>
     </PageLayout>
   );
-};
+}
 
 export default HomePage;
