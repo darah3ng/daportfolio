@@ -1,6 +1,7 @@
 import CSIROLogo from '../assets/images/csiro.svg';
 import RexlabsLogo from '../assets/images/rexlabs.svg';
 import Astronaut from '../assets/images/astronaut.svg';
+import Serenade from '../assets/images/Serenade_500x500px.jpeg';
 
 const companies = [
   {
@@ -9,7 +10,7 @@ const companies = [
     role: 'Software / Blockchain Developer',
     skills: 'Typescript, Next JS, Nest JS, Polygon, Solidity, Hardhat',
     period: '2022 - Present',
-    logo: Astronaut,
+    logo: Serenade,
   },
   {
     title: 'Freelance',

@@ -1,18 +1,26 @@
-import {
-  Box,
-  Stack,
-  Heading,
-  Flex,
-  Text,
-  Tag,
-  Image
-} from '@chakra-ui/react';
+import { Box, Stack, Heading, Flex, Text, Tag, Image } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 
 import Breifcase from '../../assets/images/briefcase.png';
 import Award from '../../assets/images/award.png';
 
 import companiesData from '../../data/companies';
 import educationsData from '../../data/educations';
+
+const listVariant = {
+  visible: { opacity: 1 },
+  hidden: { opacity: 0 },
+};
+
+const itemVariant = {
+  visible: (i) => ({
+    opacity: 1,
+    transition: {
+      delay: i * 0.3,
+    },
+  }),
+  hidden: { opacity: 0 },
+};
 
 function Company({
   title,
@@ -22,7 +30,7 @@ function Company({
   logo,
   colorMode,
   alt,
-  isEducation = false
+  isEducation = false,
 }) {
   return (
     <Box
@@ -43,11 +51,11 @@ function Company({
               rounded="full"
               width={{
                 sm: '4rem',
-                md: '14'
+                md: '14',
               }}
               height={{
                 sm: isEducation ? '4rem' : 'auto',
-                md: 'auto'
+                md: 'auto',
               }}
               objectFit="cover"
               src={logo}
@@ -78,7 +86,7 @@ function Company({
         </Stack>
       </Flex>
       <Stack spacing={2} mt={4} isInline alignItems="center">
-        {skills.split(',').map(skill => (
+        {skills.split(',').map((skill) => (
           <Tag
             size="sm"
             padding="0 4px"
@@ -105,9 +113,9 @@ function Companies({ colorMode }) {
           </Text>
           <Stack pl={3}>
             <Box
-              as='image'
-              width='50px'
-              height='50px'
+              as="image"
+              width="50px"
+              height="50px"
               color={`mode.${colorMode}.career.subtext`}
             >
               <Image src={Breifcase} />
@@ -116,21 +124,35 @@ function Companies({ colorMode }) {
         </Flex>
       </Heading>
 
-      {companiesData.map((company, index) => (
-        <Company
-          key={index}
-          title={company.title}
-          role={company.role}
-          skills={company.skills}
-          period={company.period}
-          logo={company.logo}
-          colorMode={colorMode}
-          alt={company.alt}
-        />
-      ))}
+      <motion.ul
+        initial="hidden"
+        animate="visible"
+        variants={listVariant}
+        style={{ listStyle: 'none' }}
+      >
+        {companiesData.map((company, index) => (
+          <motion.li
+            key={index}
+            custom={index}
+            variants={itemVariant}
+            style={{ paddingBottom: 16 }}
+          >
+            <Company
+              key={index}
+              title={company.title}
+              role={company.role}
+              skills={company.skills}
+              period={company.period}
+              logo={company.logo}
+              colorMode={colorMode}
+              alt={company.alt}
+            />
+          </motion.li>
+        ))}
+      </motion.ul>
     </>
   );
-};
+}
 
 function Educations({ colorMode }) {
   return (
@@ -142,9 +164,9 @@ function Educations({ colorMode }) {
           </Text>
           <Stack pl={3}>
             <Box
-              as='image'
-              width='45px'
-              height='45px'
+              as="image"
+              width="45px"
+              height="45px"
               color={`mode.${colorMode}.career.subtext`}
             >
               <Image src={Award} />
@@ -153,21 +175,35 @@ function Educations({ colorMode }) {
         </Flex>
       </Heading>
 
-      {educationsData.map((company, index) => (
-        <Company
-          key={index}
-          title={company.title}
-          role={company.role}
-          skills={company.skills}
-          period={company.period}
-          logo={company.logo}
-          colorMode={colorMode}
-          alt={company.alt}
-          isEducation={true}
-        />
-      ))}
+      <motion.ul
+        initial="hidden"
+        animate="visible"
+        variants={listVariant}
+        style={{ listStyle: 'none' }}
+      >
+        {educationsData.map((company, index) => (
+          <motion.li
+            key={index}
+            custom={index}
+            variants={itemVariant}
+            style={{ paddingBottom: 16 }}
+          >
+            <Company
+              key={index}
+              title={company.title}
+              role={company.role}
+              skills={company.skills}
+              period={company.period}
+              logo={company.logo}
+              colorMode={colorMode}
+              alt={company.alt}
+              isEducation={true}
+            />
+          </motion.li>
+        ))}
+      </motion.ul>
     </>
   );
-};
+}
 
 export { Companies, Educations };
