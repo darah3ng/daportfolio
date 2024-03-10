@@ -1,6 +1,6 @@
-import { Image, Box, Heading, useColorMode } from '@chakra-ui/react';
+import { Box, Heading, useColorMode } from '@chakra-ui/react';
 import PageLayout from '../layouts/PageLayout';
-import NotFoundGif from '../../assets/images/memeNotFound.gif';
+// import NotFoundGif from '../../assets/images/memeNotFound.gif';
 
 function PageNotFound() {
   const { colorMode } = useColorMode();
@@ -10,7 +10,7 @@ function PageNotFound() {
       <Box textAlign={'center'}>
         <Heading textDecoration={'underline'} color={`mode.${colorMode}.text`}>Not Found</Heading>
         <Box boxSize={'2xs'}>
-          <Image src={NotFoundGif} />
+          {/* <Image src={NotFoundGif} /> */}
         </Box>
       </Box>
     </PageLayout>
