@@ -53,7 +53,7 @@ function CardMe() {
             }}
           >
             <Flex justify={'center'} pt={5}>
-              <Avatar bg="yellow.300" size={'xl'} src={HumanMe} alt={'Me'} />
+              <Avatar bg="yellow.300" size={'xl'} src={HumanMe} />
             </Flex>
           </Box>
           <Stack pt={10} align={'center'}>
