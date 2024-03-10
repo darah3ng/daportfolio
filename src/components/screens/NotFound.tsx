@@ -1,6 +1,6 @@
 import { Image, Box, Heading, useColorMode } from '@chakra-ui/react';
 import PageLayout from '../layouts/PageLayout';
-import NotFoundGif from '../../../src/assets/images/memeNotFound.gif';
+import NotFoundGif from '../assets/images/memeNotFound.gif';
 
 function PageNotFound() {
   const { colorMode } = useColorMode();
