@@ -4,6 +4,7 @@ import { Box, Stack } from '@chakra-ui/react';
 import PageLayout from '../layouts/PageLayout';
 import FullHome from '../ui/FullHome';
 import { AnimationCardMe } from '../ui/CardMe';
+import { LensDemo } from '../ui/LensMe';
 import PushDownButton from '../ui/PushDownButton';
 
 function HomePage() {
@@ -23,6 +24,8 @@ function HomePage() {
             setShowCard={toggleShowCard}
           />
         </Box>
+
+        <LensDemo />
 
         {showCard ? <AnimationCardMe /> : <FullHome />}
       </Stack>
