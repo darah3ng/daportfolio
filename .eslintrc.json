@@ -119,7 +119,7 @@
       "always",
       { "exceptAfterSingleLine": true }
     ],
-    "multiline-ternary": ["error", "always-multiline"],
+    "multiline-ternary": [1, "always-multiline"],
     "new-cap": [
       "error",
       { "newIsCap": true, "capIsNew": false, "properties": true }
