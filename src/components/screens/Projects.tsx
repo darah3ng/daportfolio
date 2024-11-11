@@ -9,10 +9,10 @@ import {
   VStack
 } from '@chakra-ui/react';
 import PageLayout from '../layouts/PageLayout';
-import ProjectCard from '../ui/ProjectCard';
 import ProjectShowCard from '../ui/ProjectShowCard';
 import { getAllGitHubRepos } from '../../data/githubProjects';
 import projectShowCardData from '../../data/projectsShowcase';
+import { AnimatedPin } from '../ui/ProjectsAnimate';
 
 function ProjectsPage() {
   const [repos, setRepos] = useState<any[]>([]);
@@ -63,15 +63,13 @@ function ProjectsPage() {
           </Box>
         )}
 
-        <SimpleGrid mt={5} columns={{ base: 1, md: 2 }} spacing={{ base: 5, lg: 8 }}>
+        <SimpleGrid mt={5} columns={{ base: 1, md: 2 }} spacing={{ base: 10, lg: 8 }}>
           {repos.map(repo => (
-            <ProjectCard
+            <AnimatedPin
               key={repo.id}
               title={repo.name}
-              language={repo.language}
-              description={repo.description}
-              url={repo.html_url}
-              colorMode={colorMode}
+              desc={repo.description}
+              href={repo.html_url}
             />
           ))}
         </SimpleGrid>
