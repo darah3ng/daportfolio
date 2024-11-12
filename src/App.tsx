@@ -1,4 +1,6 @@
 import { Helmet } from 'react-helmet';
+import { SpeedInsights } from '@vercel/speed-insights/react';
+
 import MainLayout from './components/layouts/MainLayout';
 
 function App() {
@@ -15,6 +17,8 @@ function App() {
       </Helmet>
 
       <MainLayout />
+
+      <SpeedInsights />
     </>
   );
 }
