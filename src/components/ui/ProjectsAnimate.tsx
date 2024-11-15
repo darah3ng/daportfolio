@@ -1,6 +1,7 @@
 'use client';
 
 import { PinContainer } from '../ui-aceternity/threed-pins';
+import { useColorMode } from '@chakra-ui/react';
 
 const gradients = [
   // Deep Space
@@ -30,14 +31,16 @@ export const getRandomGradient = () => {
 };
 
 export function AnimatedPin({ title, desc, href }) {
+  const { colorMode } = useColorMode();
+  const textColor = `${colorMode === 'dark' ? 'text-white' : 'text-black'}`;
   return (
     <div className='h-[20rem] w-full flex items-center justify-center'>
       <PinContainer
         title={href}
         href={href}
       >
-        <div className='flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem]'>
-          <h3 className='max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100'>
+        <div className='flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[15rem] h-[15rem]'>
+          <h3 className={`max-w-xs !pb-2 !m-0 font-bold text-base ${textColor}`}>
             {title}
           </h3>
           <div className='text-base !m-0 !p-0 font-normal'>

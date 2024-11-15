@@ -119,7 +119,7 @@
       "always",
       { "exceptAfterSingleLine": true }
     ],
-    "multiline-ternary": [1, "always-multiline"],
+    "multiline-ternary": [0, "always-multiline"],
     "new-cap": [
       "error",
       { "newIsCap": true, "capIsNew": false, "properties": true }
@@ -267,7 +267,7 @@
       { "avoidEscape": true, "allowTemplateLiterals": false }
     ],
     "rest-spread-spacing": ["error", "never"],
-    "semi": ["warn", "always"],
+    "semi": ["off", "always"],
     "semi-spacing": ["error", { "before": false, "after": true }],
     "space-before-blocks": ["error", "always"],
     "space-before-function-paren": ["error", "never"],
