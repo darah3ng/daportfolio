@@ -6,7 +6,8 @@ import {
   Heading,
   Link,
   Spinner,
-  VStack
+  VStack,
+  Text
 } from '@chakra-ui/react';
 import PageLayout from '../layouts/PageLayout';
 import ProjectShowCard from '../ui/ProjectShowCard';
@@ -23,7 +24,12 @@ function ProjectsPage() {
     setIsLoading(true);
     getAllGitHubRepos()
       .then(repos => setRepos(repos))
-      .then(() => setIsLoading(false));
+      .then(() => {
+        // Add artificial delay for smoother UX
+        setTimeout(() => {
+          setIsLoading(false)
+        }, 800);
+      });
   }, []);
 
   return (
@@ -38,7 +44,18 @@ function ProjectsPage() {
           Open Source Projects
         </Heading>
 
-        <VStack mb={5} spacing={5}>
+        <Box mt={5} textAlign={'left'}>
+          <Link
+            href='https://github.com/darah3ng'
+            isExternal
+            textDecorationLine={'underline'}
+            color={`mode.${colorMode}.text`}
+          >
+              My GitHub
+          </Link> 👈
+        </Box>
+
+        <VStack mt={5} mb={5} spacing={5}>
           {projectShowCardData.map((data, index) => (
             <Box key={index} width={'100%'}>
               <ProjectShowCard name={data.name} description={data.description} website={data.website} link={data.link} techstack={data.techstack} index={index} />
@@ -46,24 +63,14 @@ function ProjectsPage() {
           ))}
         </VStack>
 
-        <Box textAlign={'center'}>
-          <Link
-            href='https://github.com/darah3ng?tab=repositories'
-            isExternal
-            textDecorationLine={'underline'}
-            color={`mode.${colorMode}.text`}
-          >
-              See more
-          </Link> 👈😎
-        </Box>
-
         {isLoading && (
-          <Box mt={5}>
-            <Spinner />
+          <Box mt={5} textAlign={'center'}>
+            <Spinner borderWidth='4px' />
+            <Text>Fetching from GitHub...</Text>
           </Box>
         )}
 
-        <SimpleGrid mt={5} columns={{ base: 1, md: 2 }} spacing={{ base: 10, lg: 8 }}>
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={{ base: 10, lg: 8 }}>
           {repos.map(repo => (
             <AnimatedPin
               key={repo.id}

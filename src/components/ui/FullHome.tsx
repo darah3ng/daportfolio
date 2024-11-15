@@ -86,9 +86,9 @@ function FullHome() {
             rounded="md"
             fontWeight="bold"
           >
-            <Text>👨‍💻&nbsp;TypeScript, Solidity, Next.js, NestJS</Text>
+            <Text>👨‍💻&nbsp;Solidity, TypeScript, Go</Text>
             <Text>📦&nbsp;Ethereum, Polygon, Alchemy</Text>
-            <Text>⚒️&nbsp;Foundry, Hardhat, Ganache</Text>
+            <Text>⚒️&nbsp;Foundry, Hardhat</Text>
           </Stack>
         </Stack>
 
