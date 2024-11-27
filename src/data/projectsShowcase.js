@@ -1,7 +1,7 @@
 const data = [
   {
     name: 'Life',
-    description: 'An interesting way to visualize the our lifespan',
+    description: 'An interesting way to visualize our a person lifespan',
     website: 'https://life-rust-three.vercel.app/',
     link: 'https://github.com/darah3ng/life',
     techstack: ['typescript']

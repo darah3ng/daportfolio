@@ -2,9 +2,6 @@
   "name": "daportfolio",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": "20.18.0"
-  },
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/react": "^2.8.2",
