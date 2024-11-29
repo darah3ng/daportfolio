@@ -10,7 +10,6 @@ import {
   Image,
 } from '@chakra-ui/react';
 import ComponentLayout from '../layouts/ComponentLayout';
-import ScrollingText from '../ui/ScrollingText';
 import Boop from '../animations/Boop.jsx';
 import { FlipWords } from '../ui-aceternity/flip-words';
 
@@ -50,6 +49,7 @@ const CustomLink = ({ text, href }) => {
 
 function FullHome() {
   const { colorMode } = useColorMode();
+  const textColor = `${colorMode === 'dark' ? 'text-white' : 'text-black'}`;
 
   return (
     <ComponentLayout title="Full home page">
@@ -137,7 +137,7 @@ function FullHome() {
           </Heading>
           <Box>
             <FlipWords
-              className="text-lg"
+              className={`text-lg ${textColor}`}
               words={[
                 'blockchain',
                 'typescript',
