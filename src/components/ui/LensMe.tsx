@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { useColorMode } from '@chakra-ui/react';
-import { Lens } from '../ui-aceternity/Lens';
+import { Lens } from '../ui-aceternity/lens';
 import { motion } from 'framer-motion';
 import meInFlorance from '../../assets/images/me-in-florance.png';
 

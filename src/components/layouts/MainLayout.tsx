@@ -10,10 +10,10 @@ const Layout = (props) => {
 
       <Box h={'100%'}>
         <Flex
-          direction='column'
-          align='center'
+          direction="column"
+          align="center"
           maxW={{ xl: '1200px' }}
-          m='0 auto'
+          m="0 auto"
           {...props}
         >
           <Routes />
