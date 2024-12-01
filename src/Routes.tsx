@@ -5,7 +5,7 @@ import AboutPage from './components/screens/About';
 import ProjectsPage from './components/screens/Projects';
 import { ArtAnimation } from './components/screens/ArtAnimation';
 import PageNotFound from './components/screens/NotFound';
-import LifeMotto from './components/screens/LifeMotto';
+import { LifeMotto } from './components/screens/LifeMotto';
 
 function Routes() {
   return (

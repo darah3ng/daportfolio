@@ -127,4 +127,4 @@ function LifeMotto() {
   );
 }
 
-export default LifeMotto;
+export { LifeMotto };
