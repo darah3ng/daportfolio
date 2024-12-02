@@ -7,7 +7,7 @@ import WalletIcon from '../assets/images/3d-icon-wallet.png';
 const data = [
   {
     name: 'Life',
-    description: 'An interesting way to visualize our a person lifespan',
+    description: 'An interesting way to visualize our lifespan.',
     website: 'https://life-rust-three.vercel.app/',
     link: 'https://github.com/darah3ng/life',
     techstack: ['typescript'],
@@ -15,7 +15,7 @@ const data = [
   },
   {
     name: 'Bank Interest Hub',
-    description: 'Track your interest rate from different banks',
+    description: 'Track your interest rate from different banks.',
     website: 'https://bank-interest-hub.vercel.app/',
     link: 'https://github.com/darah3ng/bank-interest-hub',
     techstack: ['typescript'],
