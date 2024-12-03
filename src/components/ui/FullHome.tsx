@@ -80,7 +80,7 @@ function FullHome() {
             </HStack>
           </Box>
           <Text color={`mode.${colorMode}.subtext`}>
-            Your local friendly software dev, and a blockchain lover.
+            Your Friendly Neighborhood Full-stack and Blockchain Engineer.
           </Text>
           <Text color={`mode.${colorMode}.subtext`} fontWeight="bold">
             Used to just{' '}
