@@ -14,6 +14,7 @@ import Boop from '../animations/Boop.jsx';
 import { FlipWords } from '../ui-aceternity/flip-words';
 
 import Flatpalm from '../../assets/images/flatpalm.png';
+import { redirectToGmail } from '../sections/Footer';
 
 const CustomLink = ({ text, href }) => {
   const beforeStyle = {
@@ -80,7 +81,7 @@ function FullHome() {
             </HStack>
           </Box>
           <Text color={`mode.${colorMode}.subtext`}>
-            Your Friendly Neighborhood Full-stack and Blockchain Engineer.
+            Your friendly neighborhood full-stack and blockchain engineer.
           </Text>
           <Text color={`mode.${colorMode}.subtext`} fontWeight="bold">
             Used to just{' '}
@@ -150,6 +151,11 @@ function FullHome() {
             />
           </Box>
         </HStack>
+
+        <Text color={`mode.${colorMode}.subtext`}>
+          Let’s mint a conversation -{' '}
+          <CustomLink href={redirectToGmail()} text="Drop me a hello!" />
+        </Text>
       </VStack>
     </ComponentLayout>
   );

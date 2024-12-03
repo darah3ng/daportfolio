@@ -1,20 +1,19 @@
 import { Link, Flex, HStack, Icon, useColorMode } from '@chakra-ui/react';
 import { GrLinkedin, GrInstagram, GrGithub } from 'react-icons/gr';
-import { HiOutlineMail } from 'react-icons/hi';
 import { SiGmail } from 'react-icons/si';
+
+export const redirectToGmail = () => {
+  const email = 'darah3ng@gmail.com';
+  const subject = 'Hello Dara';
+  const body = "Hi Dara, I'd like to discuss...";
+  return `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(
+    subject
+  )}&body=${encodeURIComponent(body)}`;
+};
 
 function Footer() {
   const { colorMode } = useColorMode();
   const hoverTextColor = { color: '#ff9500', borderRadius: '5' };
-
-  const redirectToGmail = () => {
-    const email = 'darah3ng@gmail.com';
-    const subject = 'Hello Dara';
-    const body = "Hi Dara, I'd like to discuss...";
-    return `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
-  };
 
   return (
     <Flex as="footer" justifyContent="center" mb={5}>
